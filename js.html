@@ -3,18 +3,31 @@
  <head>
   <meta charset="utf-8">
   <title>JS test</title>
+ 
+ <style>
+    body{
+      background-color: cornsilk;
+      text-align: center;
+      padding: 10px;
+    }
+ </style>
  </head>
  <body>
   <h1 id='tanaka'>JavaScript test</h1>
 
-  <button onclick="aloha()">CLICK ME!</button>
-
-  <img id="gazo" src="c_1571252147895.png">
+  <img id="gazo" src="4.JFIF" onclick="aloha()">
 
   <script>
+    let num = 0
     function aloha() {
+      const files = ['4.JFIF', '5.JFIF', '6.png']
+      num++
+      if(num >= files.length){
+        num = 0
+      }
+     
       let gazo = document.getElementById('gazo')
-      gazo.src = '11.jpg'
+      gazo.src = files[num]
     }
   </script>
  </body>
